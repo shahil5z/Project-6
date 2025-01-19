@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-group {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Flight Booking</h1>
+    <form action="/book" method="POST">
+        <!-- From and Destination Input -->
+        <div class="form-group">
+            <label for="departure">From:</label>
+            <input type="text" name="departure" id="departure" placeholder="Enter Departure City" required>
+        </div>
+        <div class="form-group">
+            <label for="arrival">Destination:</label>
+            <input type="text" name="arrival" id="arrival" placeholder="Enter Arrival City" required>
+        </div>
+
+        <!-- Flight Time Input -->
+        <div class="form-group">
+            <label for="flight_time">Flight Time:</label>
+            <input type="datetime-local" name="flight_time" id="flight_time" required>
+        </div>
+
+        <!-- User Info -->
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Book Flight</button>
+    </form>
+</div>
+
+</body>
+</html>
